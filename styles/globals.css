@@ -14,3 +14,112 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.Wrapper {
+  width: calc(100%);
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.Wrapper2 {
+  top: 0;
+  position: absolute;
+  width: calc(100%);
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #282b2f;
+  display: flex;
+  background-color: rgb(255, 255, 255);
+}
+
+.MainContainer {
+  flex: 1;
+}
+
+.title {
+  color: black;
+  font-size: 2rem;
+  font-weight: 600;
+  flex: 1;
+}
+
+.buttonContainer {
+  display: flex;
+}
+
+.walletLink {
+  font-size: 0.8rem;
+  border: 1px solid #282b2f;
+  border-radius: 50rem;
+  font-size: 1.2rem;
+  margin-right: 1rem;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.walletLinkTitle {
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+  color: #27ad75;
+  font-weight: 600;
+}
+
+.walletAddress {
+  font-size: 0.8rem;
+}
+
+.Button {
+  border: 1px solid #282b2f;
+  padding: 0.8rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: black;
+  border-radius: 0.4rem;
+  margin-right: 1rem;
+}
+
+.Button:hover {
+  cursor: pointer;
+}
+
+.Wrapperi {
+  display: flex;
+  height: 100vh;
+  max-width: 100vw;
+  color: #0a0b0d;
+  background-color: white;
+  display: grid;
+  place-items: center;
+}
+
+.walletConnect {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.Details {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 1rem;
+  font-weight: 500;
+  color: #282b2f;
+}
+
+.Button2 {
+  border: 1px solid #282b2f;
+  padding: 0.8rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+  border-radius: 0.4rem;
+  background-color: #3773f5;
+  color: #000;
+}
+
+.Button2:hover {
+  cursor: pointer;
+}
