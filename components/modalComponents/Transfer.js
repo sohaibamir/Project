@@ -51,7 +51,7 @@ const Transfer = (props) => {
       console.log('missing data')
     }
   }
-
+z
   return (
     <div className="WrapperTransfer">
       <div className="Amount">
@@ -100,7 +100,7 @@ const Transfer = (props) => {
           Continue
         </div>
       </div>
-      <div className="RowTransfer">
+      <div className="BottonRowTransfer">
         <div>{props.selectedToken.symbol} Balance</div>
         <div>{balance} {props.selectedToken.symbol}</div>
       </div>

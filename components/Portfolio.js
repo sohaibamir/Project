@@ -4,9 +4,12 @@ import { BsThreeDotsVertical } from "react-icons/bs";
 import { coins } from "../static/coins";
 import Coin from "./Coin";
 import BalanceChart from "./BalanceChart";
+import axios from "axios";
+import { CoinList } from "../config/api";
 import { useEffect, useState } from "react";
 
 const Portfolio = ( props ) => {
+  const [coins1, setCoins] = useState([]);
   console.log(props.thirdWebTokens);
   console.log(props.sanityTokens);
   console.log(props.walletAddress);
@@ -32,6 +35,16 @@ const Portfolio = ( props ) => {
     }
     calculateTotalBalance()
 }, [props.thirdWebTokens, props.sanityTokens])
+
+const fetchCoins = async () => {
+  const { data } = await axios.get(CoinList());
+  setCoins(data);
+};
+
+useEffect(() => {
+  fetchCoins();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+}, []);
 
   return (
     <div className={styles.Wrapper}>
@@ -59,9 +72,9 @@ const Portfolio = ( props ) => {
             <div className={styles.TableItem}>
               <div className={styles.TableRow}>
                 <div style={{ flex: 3 }}>Name</div>
-                <div style={{ flex: 2 }}>Balance</div>
-                <div style={{ flex: 1 }}>Price</div>
-                <div style={{ flex: 1 }}>Allocation</div>
+                <div style={{ flex: 2 }}>Price</div>
+                <div style={{ flex: 2 }}>24h Change</div>
+                <div style={{ flex: 2 }}>Market Cap</div>
                 <div style={{ flex: 0 }}>
                   <BsThreeDotsVertical />
                 </div>
@@ -69,7 +82,7 @@ const Portfolio = ( props ) => {
             </div>
             <div className={styles.Divider} />
             <div>
-              {(coins || []).map((coin) => (
+              {(coins1 || []).map((coin) => (
                 <div key={coin.name}>
                   <Coin coin={coin} />
                   {/* <h2>{coin.name}</h2> */}
