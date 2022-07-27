@@ -52,40 +52,21 @@ const Navbar = (props) => {
                 </Link>
               </li>
               <li className="nav-item fs-5">
-                <Link href="/">
-                  <a className="nav-link ">Learn</a>
+                <Link href="/news">
+                  <a className="nav-link ">News</a>
                 </Link>
               </li>
 
               <li className="nav-item fs-5">
-                <Link href="/">
+                <Link href="/developers">
                   <a
-                    className="nav-link pe-none"
-                    id="navbarDropdown"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
+                    className="nav-link"
                   >
                     Developers
                   </a>
                 </Link>
               </li>
-              <li className="nav-item fs-5">
-                <Link href="/">
-                  <a className="nav-link">Company</a>
-                </Link>
-              </li>
             </ul>
-            {/* <form className="d-flex mx-4" role="search">
-        <ul className="navbar-nav gap-3 media" style={location.pathname==="/signup"?{display:"none"}:{}}>
-      <li className="nav-item float-right">
-          <Link href="/login"><a className="nav-link fs-5" >Sign in</a></Link>
-    </li>
-      <li className="nav-item">
-    <Link href='/signup'><a className="btn btn1 btn-primary bd-color bg-color fs-5 px-3"  style={location.pathname==="/signup"?{display:"none"}:{}} type="submit">Get Started</a></Link>
-    </li>
-        </ul>
-      </form> */}
             <form className="d-flex mx-4" role="search">
               {location.pathname === "/signup" ? (
                 <ul className="navbar-nav media">
@@ -98,7 +79,7 @@ const Navbar = (props) => {
               ) : (
                 <ul className="navbar-nav gap-3 media">
                   <li
-                    className="nav-item float-right"
+                    className="nav-item float-right fs-5"
                     style={
                       location.pathname === "/login" ? { display: "none" } : {}
                     }

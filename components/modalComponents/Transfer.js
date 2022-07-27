@@ -51,7 +51,7 @@ const Transfer = (props) => {
       console.log('missing data')
     }
   }
-z
+
   return (
     <div className="WrapperTransfer">
       <div className="Amount">

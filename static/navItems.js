@@ -7,6 +7,7 @@ import { BiTrendingUp } from 'react-icons/bi'
 import { RiCoinsLine, RiNotification3Line } from 'react-icons/ri'
 import { MdWeb } from 'react-icons/md'
 import { BsPersonPlus } from 'react-icons/bs'
+import NewsFeed from "../pages/news";
 
 export const navItems = [
   {
@@ -24,6 +25,7 @@ export const navItems = [
   {
     title: 'For You',
     icon: <MdWeb />,
+    href: "/news"
   },
   {
     title: 'Learn and earn',
