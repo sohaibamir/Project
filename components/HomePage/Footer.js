@@ -29,7 +29,7 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/">
+                  <Link href="/prices">
                     <a className="footer-items">
                       Prices
                     </a>
@@ -79,7 +79,7 @@ const Footer = () => {
         <div className="col-lg-12 text-center">
           <div className="footer-copyright-text">
             <p>
-              Copyright © 2022 All rights reserved |<a href="/#"> CRYFTS</a>
+              Copyright © 2022 All rights reserved |<a href="/"> CRYFTS</a>
             </p>
           </div>
         </div>

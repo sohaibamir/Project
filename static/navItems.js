@@ -25,7 +25,7 @@ export const navItems = [
   {
     title: 'For You',
     icon: <MdWeb />,
-    href: "/news"
+    href: `userNews`,
   },
   {
     title: 'Learn and earn',

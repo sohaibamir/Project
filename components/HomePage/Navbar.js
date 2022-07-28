@@ -45,7 +45,7 @@ const Navbar = (props) => {
                 </Link>
               </li>
               <li className="nav-item fs-5">
-                <Link href="/">
+                <Link href="/prices">
                   <a className="nav-link " aria-current="page">
                     Prices
                   </a>

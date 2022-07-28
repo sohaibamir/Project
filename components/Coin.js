@@ -11,6 +11,7 @@ const Coin = ({ coin }) => {
         });
       }}
       className="WrapperCoin"
+      role={"button"}
     >
       <div>
         <div style={{ flex: 3 }}>

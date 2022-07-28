@@ -209,6 +209,8 @@ li {
 .WrapperSideBar {
   height: calc(100vh);
   border-right: 1px solid #282b2f;
+  border-bottom: 1px solid #282b2f;
+  border-bottom-right-radius: 0.4rem;
   width: calc(19rem - 16px - 16px);
   /* TRouBLe */
   /* padding: 0 1rem; */
@@ -1543,4 +1545,9 @@ main {
   display: flex;
   justify-content:space-between;
   margin-bottom: 0.4rem;
+}
+
+.prices-heading {
+  margin-top: 5rem;
+  padding: 2.5% 5%;
 }

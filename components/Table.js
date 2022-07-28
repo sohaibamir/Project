@@ -19,7 +19,7 @@ const Table = (props) => {
         <tbody>
           {coins.map((a) => {
             return (
-              <tr>
+              <tr key={a.image}>
                 <th scope="row" className="p-3">
                   {coins.indexOf(a) + 1}
                 </th>

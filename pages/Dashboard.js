@@ -9,11 +9,17 @@ import { useEffect, useState } from "react";
 const sdk = new ThirdwebSDK(
   new ethers.Wallet(
     process.env.NEXT_PUBLIC_METAMASK_KEY,
-    ethers.getDefaultProvider("rinkeby","https://rinkeby.infura.io/v3/")
+    ethers.getDefaultProvider("rinkeby", "https://rinkeby.infura.io/v3/")
   )
 );
 
-const Dashboard = ({ address }) => {
+const Dashboard = ({  }) => {
+  const ISSERVER = typeof window === "undefined";
+  let walletAddress;
+  if(!ISSERVER) {
+   // Access localStorage
+    walletAddress=localStorage.getItem('walletAddress')
+  } 
   const [thirdWebTokens, setThirdWebTokens] = useState([]);
   const [sanityTokens, setSanityTokens] = useState([]);
 
@@ -37,22 +43,20 @@ const Dashboard = ({ address }) => {
   return (
     <div className="WrapperDashboard">
       <Sidebar />
-      <div className="MainContainer">
-        <Header
+      {walletAddress && <div className="MainContainer">
+         <Header
           thirdWebTokens={thirdWebTokens}
           sanityTokens={sanityTokens}
-          address={address}
+          address={walletAddress}
         />
         <Main
           thirdWebTokens={thirdWebTokens}
           sanityTokens={sanityTokens}
-          address={address}
+          address={walletAddress}
         />
-      </div>
+      </div>}
     </div>
   );
 };
 
 export default Dashboard;
-
-// export async function getServerSideProps(context) {}
